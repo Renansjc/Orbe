@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orbe</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell" aria-label="Orbe">
+    <header class="top">
+      <div class="brand">
+        <span class="orb" aria-hidden="true"></span>
+        <div class="brand-text">
+          <h1>Orbe</h1>
+          <p id="status" class="status" role="status" aria-live="polite">
+            <span class="dot" aria-hidden="true"></span><span id="status-text">Conectando ao hub…</span>
+          </p>
+        </div>
+      </div>
+      <button id="atualizar" class="icon-btn" type="button" aria-label="Atualizar" title="Atualizar">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v5h-5"/></svg>
+      </button>
+    </header>
+
+    <nav id="categorias" class="categorias" aria-label="Categorias de dispositivos"></nav>
+
+    <div id="aviso" class="aviso" role="alert" hidden></div>
+
+    <section id="vista" class="vista" aria-live="polite"></section>
+
+    <footer class="rodape">
+      <span id="rodape-texto">Orbe local · sem nuvem</span>
+    </footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿[package]
+name = "mt01-matter-probe"
+version = "0.1.0"
+edition = "2024"
+description = "Local Matter diagnostic foundation for the NovaDigital MT-01 bridge"
+license = "MIT"
+
+[workspace]
+members = ["src-tauri"]
+
+[dependencies]
+matter-controller = "0.18.1"
+matter-codec = "0.3.1"
+mdns-sd = "0.21.5"
+serde = { version = "1", features = ["derive"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "sync"] }
+
+
+
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 3
+strip = true
